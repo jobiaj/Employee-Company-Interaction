@@ -13,4 +13,8 @@ class HomePageView(TemplateView):
 
 class OutingPageView(TemplateView):
     def get(self, request, **kwargs):
-        return render(request, 'index1.html', context=None)
+        return render(request, 'charts.html', context=None)
+
+class TeamListView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'team_list.html', context=None)

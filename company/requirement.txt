@@ -1,1 +1,2 @@
-Installation of pgsql document: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04
+1. Installation of pgsql document: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04
+2. pip install Pillow
