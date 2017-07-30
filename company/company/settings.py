@@ -127,3 +127,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 TEAM_BASE = os.path.join(MEDIA_ROOT, 'team_members')
+#Now import local_settings 
+from local_settings import *
