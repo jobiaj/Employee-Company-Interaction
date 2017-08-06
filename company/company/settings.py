@@ -118,6 +118,11 @@ USE_L10N = True
 USE_TZ = True
 
 
+#login
+LOGIN_URL = '/accounts/login'
+LOGIN_REDIRECT_URL = '/relation/homepage'
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
@@ -127,3 +132,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 TEAM_BASE = os.path.join(MEDIA_ROOT, 'team_members')
+#Now import local_settings 
+from local_settings import *
