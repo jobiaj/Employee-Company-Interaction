@@ -18,8 +18,16 @@ class Employee(models.Model):
     name = models.CharField(max_length=100)
     team = models.PositiveIntegerField(choices=TEAM, default=JIFFY)
     sub_team = models.PositiveIntegerField(choices=SUB_TEAM, default=ENGINEERING)
-    phone_number = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
+    designation = models.CharField(max_length=100,  null=True, blank=True)
+    phone_number = models.CharField(max_length=100,  null=True, blank=True)
+    email = models.CharField(max_length=100,  null=True, blank=True)
+    employee_id = models.CharField(max_length=100, null=True, blank=True)
+    state = models.CharField(max_length=100, null=True, blank=True)
+    blood_group = models.CharField(max_length=100, default='Blood group information is not available')
+    date_of_birth = models.CharField(max_length=100, default='DOB is not available')
+    brief_description = models.CharField(max_length=2000, default='Description is not available')
+    emergency_contact_number = models.CharField(max_length=100, default='Emergency contact number is not available')
+    date_of_join = models.CharField(max_length=100, default='This information is not available')
     image = models.ImageField(upload_to='team_members/', default='team_members/None/no-img.jpg')
 
     class Meta:
