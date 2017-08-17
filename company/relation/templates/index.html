@@ -45,18 +45,9 @@
   <body>
   <!-- container section start -->
   <section id="container" class="">
-      {% block topbarmenu %}
-          {% include "topbar.html" %}
+      {% block sidebarmenu %}
+          {% include "menu.html" %}
       {% endblock %}
-      <!--header end-->
-
-      <!--sidebar start-->
-      <aside>
-          {% block sidebarmenu %}
-              {% include "menu.html" %}
-          {% endblock %}
-      </aside>
-
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">

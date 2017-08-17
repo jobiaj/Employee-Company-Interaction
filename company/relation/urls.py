@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^accounts/logout/$', basics.user_logout, name='eci_logout'),
     url(r'^relation/userprofile/$',basics.get_userprofile,name='get_userprofile'),
     url(r'^$', basics.get_homepage, name='homepage'),
+    url(r'^team_page/(?P<team_type>[\w\-]+)/$', basics.get_team_page, name='team_page'),
 
 ]

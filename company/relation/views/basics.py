@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
 from django.contrib.auth import authenticate, login
+from relation.models.basics import Employee
 # Create your views here.
 
     
@@ -47,3 +48,12 @@ def user_logout(request):
 
 def get_userprofile(request):
 	return render(request, 'profile.html')
+
+def get_team_page(request, team_type):
+	team_type = str(team_type).upper()
+	if team_type == 'JIFFY':
+		team = Employee.objects.filter(team=Employee.JIFFY)
+	elif team_type == 'DOCUBE':
+		team = Employee.objects.filter(team=Employee.DOCUBE)
+	return render(request, 'team_page.html', {'team': team, 'team_name':team_type})
+
