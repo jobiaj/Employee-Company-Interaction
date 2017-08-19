@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
 from django.contrib.auth import authenticate, login
-from relation.models.basics import Employee
+from relation.models.basics import Employee, Gallery
 # Create your views here.
 
     
@@ -56,4 +56,13 @@ def get_team_page(request, team_type):
 	elif team_type == 'DOCUBE':
 		team = Employee.objects.filter(team=Employee.DOCUBE)
 	return render(request, 'team_page.html', {'team': team, 'team_name':team_type})
+
+def get_gallery(request):
+    gal = Gallery.objects.all()
+    count = gal.count()
+    return render(request, 'gallery.html', {'photos': gal, 'count':count})
+
+def get_people_info(request, id):
+	employ = Employee.objects.get(id= int(id))
+	return render(request, 'people_info.html', {'employ': employ})
 

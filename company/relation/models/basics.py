@@ -37,6 +37,12 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User)
     avatar = models.ImageField(upload_to='avatar/', blank=True, null=True)
 
+class Gallery(models.Model):
+    uploaded_by = models.CharField(max_length=100, null=True, blank=True)
+    tags = models.CharField(max_length=1000, null=True, blank=True)
+    date_of_upload = models.DateTimeField(auto_now=True)
+    image = models.ImageField(upload_to='gallery/', default='gallery/None/no-img.jpg')
+
 
 
 

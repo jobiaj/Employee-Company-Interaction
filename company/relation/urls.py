@@ -10,5 +10,8 @@ urlpatterns = [
     url(r'^relation/userprofile/$',basics.get_userprofile,name='get_userprofile'),
     url(r'^$', basics.get_homepage, name='homepage'),
     url(r'^team_page/(?P<team_type>[\w\-]+)/$', basics.get_team_page, name='team_page'),
+    url(r'^gallery/$', basics.get_gallery, name='gallery'),
+    url(r'^team_page/people_info/(?P<id>\d+)/$', basics.get_people_info, name='people_info'),
+
 
 ]
