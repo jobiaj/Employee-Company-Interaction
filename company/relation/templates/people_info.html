@@ -54,10 +54,11 @@
         <section class="wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h3 class="page-header"><i class="fa fa-table"></i> Gallery</h3>
+              <h3 class="page-header"><i class="fa fa-table"></i>Teams</h3>
               <ol class="breadcrumb">
                 <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-                <li><i class="fa fa-table"></i>Gallery</li>
+                <li><i class="fa fa-table"></i>Teams</li>
+                <li><i class="fa fa-th-list"></i>People</li>
               </ol>
             </div>
           </div>
@@ -74,14 +75,8 @@
                               </div>
                             </div>
                             <div class="col-lg-4 col-sm-4 follow-info">
-                                <p>Hello I’m Jenifer Smith, a leading expert in interactive and creative design.</p>
-                                <p>@jenifersmith</p>
-                                <p><i class="fa fa-twitter">jenifertweet</i></p>
-                                <h6>
-                                    <span><i class="icon_clock_alt"></i>11:05 AM</span>
-                                    <span><i class="icon_calendar"></i>25.10.13</span>
-                                    <span><i class="icon_pin_alt"></i>NY</span>
-                                </h6>
+                                <p>Hello I’m {{ employ.name }}, from {{employ.team}} .</p>
+                                <p>@{{ employ.name }}</p>
                             </div>
                             <div class="col-lg-2 col-sm-6 follow-info weather-category">
                                       <ul>
@@ -89,29 +84,7 @@
                                               
                                               <i class="fa fa-comments fa-2x"> </i><br>
                                               
-                                              Contrary to popular belief, Lorem Ipsum is not simply
-                                          </li>
-                                           
-                                      </ul>
-                            </div>
-                            <div class="col-lg-2 col-sm-6 follow-info weather-category">
-                                      <ul>
-                                          <li class="active">
-                                              
-                                              <i class="fa fa-bell fa-2x"> </i><br>
-                                              
-                                              Contrary to popular belief, Lorem Ipsum is not simply 
-                                          </li>
-                                           
-                                      </ul>
-                            </div>
-                            <div class="col-lg-2 col-sm-6 follow-info weather-category">
-                                      <ul>
-                                          <li class="active">
-                                              
-                                              <i class="fa fa-tachometer fa-2x"> </i><br>
-                                              
-                                              Contrary to popular belief, Lorem Ipsum is not simply
+                                              {{employ.brief_description}}
                                           </li>
                                            
                                       </ul>
@@ -148,34 +121,48 @@
                                   <div id="profile" class="tab-pane active">
                                     <section class="panel">
                                       <div class="bio-graph-heading">
-                                                Hello I’m Jenifer Smith, a leading expert in interactive and creative design specializing in the mobile medium. My graduation from Massey University with a Bachelor of Design majoring in visual communication.
+                                                Hello I’m {{employ.name}}, a leading expert in interactive and creative design specializing in the mobile medium. My graduation from Massey University with a Bachelor of Design majoring in visual communication.
                                       </div>
                                       <div class="panel-body bio-graph-info">
                                           <h1>Bio Graph</h1>
                                           <div class="row">
                                               <div class="bio-row">
-                                                  <p><span>First Name </span>: Jenifer </p>
+                                                  <p><span>Full Name </span>: {{employ.name}} </p>
+                                              </div>  
+                                              <div class="bio-row">
+                                                  <p><span>State</span>: {{employ.state}} </p>
                                               </div>
                                               <div class="bio-row">
-                                                  <p><span>Last Name </span>: Smith</p>
-                                              </div>                                              
+                                                  <p><span>Employe ID </span>: {{employ.employee_id}} </p>
+                                              </div>                                           
                                               <div class="bio-row">
-                                                  <p><span>Birthday</span>: 27 August 1987</p>
+                                                  <p><span>Birthday</span>: {{employ.date_of_birth}} </p>
                                               </div>
                                               <div class="bio-row">
-                                                  <p><span>Country </span>: United</p>
+                                                  <p><span>Team </span>: {{employ.team}}</p>
                                               </div>
                                               <div class="bio-row">
-                                                  <p><span>Occupation </span>: UI Designer</p>
+                                                  <p><span>Sub Team </span>: {{employ.sub_team}}</p>
                                               </div>
                                               <div class="bio-row">
-                                                  <p><span>Email </span>:jenifer@mailname.com</p>
+                                                  <p><span>Designation </span>: {{employ.designation}}</p>
+                                              </div>
+
+                                              <div class="bio-row">
+                                                  <p><span>Date Of Join </span>: {{employ.date_of_join}}</p>
+                                              </div>
+
+                                              <div class="bio-row">
+                                                  <p><span>Mobile </span>: {{employ.phone_number}}</p>
                                               </div>
                                               <div class="bio-row">
-                                                  <p><span>Mobile </span>: (+6283) 456 789</p>
+                                                  <p><span>Email </span>:  {{employ.email}}</p>
                                               </div>
                                               <div class="bio-row">
-                                                  <p><span>Phone </span>:  (+021) 956 789123</p>
+                                                  <p><span>Blood Group </span>:  {{employ.blood_group}}</p>
+                                              </div>
+                                              <div class="bio-row">
+                                                  <p><span>Emergency Contact Number </span>:  {{employ.emergency_contact_number}}</p>
                                               </div>
                                           </div>
                                       </div>
